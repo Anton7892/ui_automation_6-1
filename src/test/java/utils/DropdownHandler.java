@@ -31,4 +31,8 @@ public class DropdownHandler {
     public static void selectByValue(WebElement dropdown, String text){
         new Select(dropdown).selectByValue(text);
     }
+
+    public static String getDefaultOption(WebElement dropdown){
+        return new Select(dropdown).getFirstSelectedOption().getText();
+    }
 }
